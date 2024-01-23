@@ -58,7 +58,7 @@ const libroSchema = new mongoose.Schema({
 const Libro = mongoose.model("Libro", libroSchema);
 
 // Middleware de autenticación
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
   const authToken = req.headers["authorization"];
 
   // En un escenario real, compararía este token con una base de datos o algún otro sistema de autenticación.
@@ -67,7 +67,7 @@ app.use((req, res, next) => {
   } else {
     res.status(401).send("Acceso no autorizado");
   }
-});
+});*/
 
 // ... [Todas las rutas de CRUD de libros aquí]
 
@@ -160,7 +160,7 @@ app.listen(PORT, () => {
 
 /*Agregar el nuevo script para nodemon 
 "scripts": {
-    "start": "nodemon src/app.js"
+    "start": "nodemon src/index.js"
   },
 */
 
@@ -169,3 +169,15 @@ app.listen(PORT, () => {
 //Traer la uri de conexión y llevarla a una variable de ambiente
 
 //Instalar dotenv npm i dotenv
+
+//En mongo atlas se debe crear la cuenta, crear el nuevo proyecto
+//Creamos la base de datos gratuita y dejamos por defecto
+//Creamos el usuario y contraseña en data base access
+//Creamos la ip aqui se debe configurar la ip publica o ip donde
+//tengamos alojado el back para hacer consultas etc por authorization
+//lo dejamos con acceso a todos
+//Lo siguiente es hacer la conexion mediante el link que se proporciona en connect
+//alli la conexion seria connect your aplication en driver, mongodb compas es similar a phpmyadmind
+
+//Para subir a render.com build command npm install, start command npm run start
+//Y agregar las variables de entorno que en este caso es solo 1
